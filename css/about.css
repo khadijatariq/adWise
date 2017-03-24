@@ -32,14 +32,15 @@ body
 {
     color:white;
     text-align:center;
-    margin-top:130px;
+    margin-top:50px;
 }
 
 #bbox h3
 {
-    color:#48a3db;
+    color:#59b5ee;
     text-align:left;
-    margin-top:130px;
+    margin-top:20px;
+    margin-left:40px;
 }
 
 #bbox a
@@ -50,8 +51,8 @@ body
 #bbox p
 {
     color:white;
-    text-align:center;
-    margin-top: 45px;
+    text-align:left;
+    margin-top: 20px;
     padding-left:40px;
     padding-right:40px;
 }
