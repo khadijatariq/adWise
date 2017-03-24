@@ -20,6 +20,18 @@ body
 	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
+#sbutton
+{
+	background-color:#48a3db;
+	color:white;
+}
+
+#lbutton
+{
+	background-color:#c2c2c1;
+	color:white;
+}
+
 html {
   position: relative;
   min-height: 100%;
@@ -31,7 +43,7 @@ html {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-  background-color: #f5f5f5;
+  background-color: #f4f4f4;
 }
 
 body > .container {
