@@ -20,16 +20,13 @@ body
 	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
-#sbutton
+#bbox
 {
-	background-color:#48a3db;
-	color:white;
-}
-
-#lbutton
-{
-	background-color:#c2c2c1;
-	color:white;
+    color:white;
+	background-color:black;
+	opacity:0.4;
+	min-height:505px;
+	margin-top: -20px;
 }
 
 html {
