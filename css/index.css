@@ -35,12 +35,6 @@ body
     margin-top:130px;
 }
 
-#bt
-{
-    background: rgba(0, 0, 0, 0);
-    border-color:white;
-}
-
 #bbox a
 {
     color:white;
@@ -54,6 +48,38 @@ body
     padding-left:40px;
     padding-right:40px;
 }
+
+#ebox
+{
+    color:#5b5b5b;
+	background: rgba(0, 0, 0, 0);
+	min-height:505px;
+	margin-top: -20px;
+}
+
+#ebox h2
+{
+    color:#5b5b5b;
+    text-align:center;
+    margin-top:130px;
+}
+
+#ebox a
+{
+    color:white;
+}
+
+#ebox p
+{
+    color:#5b5b5b;
+    text-align:center;
+    margin-top: 45px;
+    padding-left:40px;
+    padding-right:40px;
+}
+
+
+
 
 html {
   position: relative;
