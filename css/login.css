@@ -52,6 +52,13 @@ body {
   height: 78px;
   background-color: #f4f4f4;
 }
+body > .container {
+  padding: 60px 15px 0;
+}
 .container .text-muted {
-  margin: 40px 0;
+  margin: 20px 0;
+}
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
 }
