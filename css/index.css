@@ -35,11 +35,24 @@ body
     margin-top:130px;
 }
 
+#bt
+{
+    background: rgba(0, 0, 0, 0);
+    border-color:white;
+}
+
+#bbox a
+{
+    color:white;
+}
+
 #bbox p
 {
     color:white;
     text-align:center;
     margin-top: 45px;
+    padding-left:40px;
+    padding-right:40px;
 }
 
 html {
