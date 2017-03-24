@@ -23,8 +23,7 @@ body
 #bbox
 {
     color:white;
-	background-color:black;
-	opacity:0.4;
+	background: rgba(0, 0, 0, 0.4);
 	min-height:505px;
 	margin-top: -20px;
 }
