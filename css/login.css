@@ -10,18 +10,21 @@ body {
     background-repeat: no-repeat;
     min-height: 600px;
 }
-
 .form-signin {
   max-width: 330px;
   padding: 15px;
   margin: 0 auto;
 }
-.form-signin .form-signin-heading,
-.form-signin .checkbox {
-  margin-bottom: 10px;
+.form-signin .form-signin-heading
+{
+  margin-bottom: 15px;
+  text-align:center;
+  color:#5b5b5b;
 }
-.form-signin .checkbox {
-  font-weight: normal;
+.need-help
+{
+  float: right;
+  text-align:right;
 }
 .form-signin .form-control {
   position: relative;
