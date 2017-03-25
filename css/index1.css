@@ -9,37 +9,17 @@ body
 {
     background: rgba(0, 0, 0, 0.4);
     text-align: center;
+    color: white;
 }
-
-#bbox h2
-{
-    color:white;
-}
-
-#bbox h3
-{
-    color:#48a3db;
-}
-
-#bbox a
-{
-    color:white;
-}
-
-#bbox p
-{
-    color:white;
-}
-
 #ebox
 {
-	background: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0);
+    text-align: center;
 }
 
 #ebox h2
 {
     color:#5b5b5b;
-    text-align:center;
 }
 
 #ebox a
@@ -50,5 +30,4 @@ body
 #ebox p
 {
     color:#5b5b5b;
-    text-align:center;
 }
