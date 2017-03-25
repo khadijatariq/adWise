@@ -12,49 +12,63 @@
     <link href="css/signup.css" rel="stylesheet">
 </head>
 <body>
-    <div class="header" id="box-wrapper">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html" style="padding:10px 50px"><img src="images/logo.png" style="max-width:105px;" ></a>
-                <div class="navbar-header navbar">
-                    <ul class="nav navbar-nav">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="container">
-            <div class="row">
-                <div class="board">
-                    <ul class="nav nav-tabs">
-                        <div class="liner"></div>
-                        <li rel-index="0" class="active">
-                            <a href="#step-1" class="btn" aria-controls="step-1" role="tab" data-toggle="tab">
-                                <span><i class="glyphicon glyphicon-user"></i></span>
-                            </a>
-                        </li>
-                        <li rel-index="1">
-                            <a href="#step-2" class="btn disabled" aria-controls="step-2" role="tab" data-toggle="tab">
-                                <span><i class="glyphicon glyphicon-plus"></i></span>
-                            </a>
-                        </li>
-                        <li rel-index="2">
-                            <a href="#step-3" class="btn disabled" aria-controls="step-3" role="tab" data-toggle="tab">
-                                <span><i class="glyphicon glyphicon-ok"></i></span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+
+<nav id="myNavbar" class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html" style="padding:5px 50px"><img src="images/logo.png" style="max-width:90px;" ></a>
         </div>
-        <footer class="footer">
-            <div class="container">
-                <p class="text-muted">© 2017 adWise. <a href="https://lums.edu.pk/" target="_blank">Lahore University of Management Sciences</a></p>
-                <img src="images/lums.png" style="max-width:140px; float:right; margin-top: -45px;">
-            </div>
-        </footer>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" style="color:#48a3db; font-weight:bold">Sign Up</a></li>
+                <li><a href="#" style="color:#8ecc3d;">(Student)</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
     </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="board">
+            <ul class="nav nav-tabs">
+                <div class="liner"></div>
+                <li rel-index="0" class="active">
+                    <a href="#step-1" class="btn" aria-controls="step-1" role="tab" data-toggle="tab">
+                        <span><i class="glyphicon glyphicon-user"></i></span>
+                    </a>
+                </li>
+                <li rel-index="1">
+                    <a href="#step-2" class="btn disabled" aria-controls="step-2" role="tab" data-toggle="tab">
+                        <span><i class="glyphicon glyphicon-plus"></i></span>
+                    </a>
+                </li>
+                <li rel-index="2">
+                    <a href="#step-3" class="btn disabled" aria-controls="step-3" role="tab" data-toggle="tab">
+                        <span><i class="glyphicon glyphicon-ok"></i></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <div class="container" id="map">
+        <p style="margin-top:15px">© Copyright 2017 adWise</p>
+        <a href="https://lums.edu.pk/" target="_blank"><img src="images/lums.png"
+                                                            style="max-width:140px; float:right; margin-top: -38px;"></a>
+    </div>
+</div>
 </body>
 </html>
