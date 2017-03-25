@@ -8,18 +8,17 @@ body
 #bbox
 {
     background: rgba(0, 0, 0, 0.4);
+    text-align: center;
 }
 
 #bbox h2
 {
     color:white;
-    text-align:center;
 }
 
 #bbox h3
 {
     color:#48a3db;
-    text-align:left;
 }
 
 #bbox a
@@ -30,7 +29,6 @@ body
 #bbox p
 {
     color:white;
-    text-align:center;
 }
 
 #ebox
