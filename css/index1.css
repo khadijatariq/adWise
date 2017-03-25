@@ -20,7 +20,6 @@ body
 {
     color:#48a3db;
     text-align:left;
-    margin-top:130px;
 }
 
 #bbox a
@@ -32,9 +31,6 @@ body
 {
     color:white;
     text-align:center;
-    margin-top: 45px;
-    padding-left:40px;
-    padding-right:40px;
 }
 
 #ebox
@@ -46,7 +42,6 @@ body
 {
     color:#5b5b5b;
     text-align:center;
-    margin-top:130px;
 }
 
 #ebox a
@@ -58,7 +53,4 @@ body
 {
     color:#5b5b5b;
     text-align:center;
-    margin-top: 45px;
-    padding-left:40px;
-    padding-right:40px;
 }
