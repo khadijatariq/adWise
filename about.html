@@ -1,97 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>adWise | ABOUT</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="images/logo.png">
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
-    <link rel="stylesheet" href="css/about.css" type="text/css"/>
-
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>adWise | ABOUT</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/about.css" type="text/css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
-<div class="header" id="box-wrapper">
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html" style="padding:10px 50px"><img src="images/logo.png" style="max-width:105px;" ></a>
-            <div class="navbar-header navbar">
-                <ul class="nav navbar-nav">
-                    <li><a href="#" style="color:#48a3db; font-weight:bold">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                </ul>
-            </div>
-            <div class="navbar-header navbar-right">
-                <ul class="nav navbar-nav">
-                    <li><a href="signup.html"><button type="button" class="btn btn-lg btn-primary" >Sign Up</button></a></li>
-                    <li><a href="login.html"><button type="button" class="btn btn-lg btn-default">Login</button></a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12" id="bbox">
-                <img src="images/users.png" style="max-width:50px; float:middle;
-                margin-left:440px; padding-top:40px; padding-bottom:0px">
-                <h2 style="margin-top:-40px">About Us</h2>
-                <p style="margin-top:40px">adWise is a platform for Computer Science majors at LUMS which aims to
-                    guide students to choose courses by filtering based on
-                    prerequisites, clashes and type of fields in Computer Science.
-                </p>
-                <h3>- Perspective</h3>
-                <p>At the start of each semester, students have to spend countless hours planning
-                    their courses according to their requirements. In most cases, later, they realise
-                    that they have clashes or they do not fulfil the prerequisite for a course.
-                    Even worse, students might find out that the course they took has a strict instructor
-                    or is difficult so they end up dropping it. adWise is a new system that is a replacement
-                    for certain aspects of three existing systems used by students in these critical times:
-                    Zambeel and Suraj.
-                </p>
-                <h3>- Scope</h3>
-                <p>A web application which aims to guide the undergraduate CS majors at
-                    LUMS to choose the right courses. By filtering out the courses based on prerequisites
-                    and clashes, the application provides each student with a clear choice of courses
-                    in each field. adWise also displays courses being offered in the upcoming semester
-                    including their schedule and course outline.<br />
-                    Not only that, it suggests career options and instructors as advisers according
-                    to a particular student’s field of interest. Students can check and post reviews
-                    about a particular course or instructor. The idea is to contain all the important and crucial
-                    functionality of Suraj, Portal and LDF on a single platform, thus, making the task of choosing
-                    a course easier and hassle-free.
-                </p>
-                <h3>- Users and Characteristics</h3>
-                <p style="margin-bottom:40px">adWise will cater mainly to CS students and instructors. Although the
-                    application will not differentiate between them, the students can further be divided into two groups according
-                    to their requirements i.e. Freshmen, Sophomores and Juniors, Seniors.<br /><br />
-                    Freshmen, Sophomores:   At this stage, students are mostly in need of guidance in their career paths. adWise
-                    helps the students by referring them to instructors working in that field. In case the
-                    student is indecisive about his field, it also suggests courses in a variety of fields to
-                    help him in his decision. Since it is advised to enroll in pre-decided core courses for
-                    the first four semesters, students do not face much difficulty during enrollment.<br /><br />
-                    Juniors, Seniors:	At the start of each of the last four semesters, students face challenges in deciding the
-                    courses to enroll in. adWise will provide course outlines for all the courses offered in
-                    that semester. It will also suggest a list of possible courses in each field that can fit into that student’s schedule.
-                    Not only that, the students will be able to post and look at the reviews of a particular course and instructor.<br /><br />
-                    Instructors:	Instructors have limited usage of this application. adWise will allow them to update
-                    their information, courses and course outlines. They can also view the evaluations and
-                    reviews of their courses by students.
-
-                </p>
-            </div>
-        </div>
+<nav id="myNavbar" class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html" style="padding:5px 50px"><img src="images/logo.png" style="max-width:90px;" ></a>
     </div>
-
-
-    <footer class="footer">
-        <div class="container">
-            <p class="text-muted">© 2017 adWise. <a href="https://lums.edu.pk/" target="_blank">Lahore University of Management Sciences</a></p>
-            <img src="images/lums.png" style="max-width:140px; float:right; margin-top: -45px;">
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="signup.html">Sign Up</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li><a href="#" style="color:#48a3db; font-weight:bold">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12" id="bbox">
+      <br/>
+      <br/>
+      <div class="row">
+        <div class="col-sm-4 col-md-4"></div>
+        <div class="col-sm-4 col-md-4">
+          <h2><img src="images/users.png" style="max-width:50px;"><span class="tab-space">About Us</span></h2>
         </div>
-    </footer>
+      </div>
+      <p>adWise is a platform for Computer Science majors at LUMS which aims to
+        guide students to choose courses by filtering based on
+        prerequisites, clashes and type of fields in Computer Science.
+      </p>
+      <h3>- Perspective</h3>
+      <p>At the start of each semester, students have to spend countless hours planning
+        their courses according to their requirements. In most cases, later, they realise
+        that they have clashes or they do not fulfil the prerequisite for a course.
+        Even worse, students might find out that the course they took has a strict instructor
+        or is difficult so they end up dropping it. adWise is a new system that is a replacement
+        for certain aspects of three existing systems used by students in these critical times:
+        Zambeel and Suraj.
+      </p>
+      <h3>- Scope</h3>
+      <p>A web application which aims to guide the undergraduate CS majors at
+        LUMS to choose the right courses. By filtering out the courses based on prerequisites
+        and clashes, the application provides each student with a clear choice of courses
+        in each field. adWise also displays courses being offered in the upcoming semester
+        including their schedule and course outline.<br />
+        Not only that, it suggests career options and instructors as advisers according
+        to a particular student’s field of interest. Students can check and post reviews
+        about a particular course or instructor. The idea is to contain all the important and crucial
+        functionality of Suraj, Portal and LDF on a single platform, thus, making the task of choosing
+        a course easier and hassle-free.
+      </p>
+      <h3>- Users and Characteristics</h3>
+      <p>adWise will cater mainly to CS students and instructors. Although the
+        application will not differentiate between them, the students can further be divided into two groups according
+        to their requirements i.e. Freshmen, Sophomores and Juniors, Seniors.<br /><br />
+        Freshmen, Sophomores:   At this stage, students are mostly in need of guidance in their career paths. adWise
+        helps the students by referring them to instructors working in that field. In case the
+        student is indecisive about his field, it also suggests courses in a variety of fields to
+        help him in his decision. Since it is advised to enroll in pre-decided core courses for
+        the first four semesters, students do not face much difficulty during enrollment.<br /><br />
+        Juniors, Seniors:	At the start of each of the last four semesters, students face challenges in deciding the
+        courses to enroll in. adWise will provide course outlines for all the courses offered in
+        that semester. It will also suggest a list of possible courses in each field that can fit into that student’s schedule.
+        Not only that, the students will be able to post and look at the reviews of a particular course and instructor.<br /><br />
+        Instructors:	Instructors have limited usage of this application. adWise will allow them to update
+        their information, courses and course outlines. They can also view the evaluations and
+        reviews of their courses by students.
+      </p>
+      <br/>
+      <br/>
+      <br/>
+    </div>
+  </div>
 </div>
-
+<div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <div class="container" id="map">
+    <hr>
+    <p>© Copyright 2017 adWise</p>
+    <a href="https://lums.edu.pk/" target="_blank"><img src="images/lums.png" style="max-width:140px; float:right; margin-top: -45px;"></a>
+  </div>
+</div>
 </body>
 </html>
