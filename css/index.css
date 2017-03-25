@@ -38,3 +38,7 @@ body
 .row.extra-bottom-padding{
    margin-bottom: -20px;
 }
+#map1
+{
+    margin-top: -20px;
+}
