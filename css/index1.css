@@ -1,4 +1,4 @@
-body
+#box-wrapper
 {
     background-image: url(../images/bg.jpg);
     background-size: cover;
@@ -8,18 +8,50 @@ body
 #bbox
 {
     background: rgba(0, 0, 0, 0.4);
-    text-align: center;
-    color: white;
+	min-height:530px;
+	margin-top: -20px;
 }
+
+#bbox h2
+{
+    color:white;
+    text-align:center;
+    margin-top:130px;
+}
+
+#bbox h3
+{
+    color:#48a3db;
+    text-align:left;
+    margin-top:130px;
+}
+
+#bbox a
+{
+    color:white;
+}
+
+#bbox p
+{
+    color:white;
+    text-align:center;
+    margin-top: 45px;
+    padding-left:40px;
+    padding-right:40px;
+}
+
 #ebox
 {
-    background: rgba(0, 0, 0, 0);
-    text-align: center;
+	background: rgba(0, 0, 0, 0);
+	min-height:505px;
+	margin-top: -20px;
 }
 
 #ebox h2
 {
     color:#5b5b5b;
+    text-align:center;
+    margin-top:130px;
 }
 
 #ebox a
@@ -30,4 +62,8 @@ body
 #ebox p
 {
     color:#5b5b5b;
+    text-align:center;
+    margin-top: 45px;
+    padding-left:40px;
+    padding-right:40px;
 }
