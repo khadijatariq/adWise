@@ -9,6 +9,30 @@ body
     background-repeat: no-repeat;
     margin-bottom: 20px;
 }
+.board {
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+    background: rgba(248,248,248,0.5);
+    border-radius: 8px 8px 0 0;
+}
+.board .nav-tabs {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+.liner {
+    height: 2px;
+    background: #ddd;
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+}
 .wrapper
 {
     display: -webkit-flex;
