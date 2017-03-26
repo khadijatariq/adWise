@@ -24,7 +24,14 @@
       </div>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="signup.html">Sign Up</a></li>
+          <li class="dropdown">
+            <a href="signup.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+               aria-expanded="false">Sign Up <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="signup-st.html">Student</a></li>
+              <li><a href="signup-inst.html">Instructor</a></li>
+            </ul>
+          </li>
           <li><a href="login.html">Login</a></li>
         </ul>
         <ul class="nav navbar-nav">
@@ -38,15 +45,6 @@
   <div class="container" id="map">
     <div class="row extra-bottom-padding">
       <div class="col-sm-12 col-md-6" id="bbox">
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
         <br/>
         <h2>Welcome to adWise</h2>
         <p>A platform for Computer Science majors at LUMS which aims to
@@ -72,15 +70,6 @@
       </div>
       <div class="clearfix visible-sm-block"></div>
       <div class="col-sm-12 col-md-6" id="ebox">
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
         <br/>
         <h2>For students and instructors</h2>
         <p>Are you new to adWise?<br />
@@ -113,11 +102,11 @@
     </div>
   </div>
   <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-    <div class="container" id="map1">
-      <hr>
-      <p>© Copyright 2017 adWise</p>
-      <a href="https://lums.edu.pk/" target="_blank"><img src="images/lums.png" style="max-width:140px; float:right; margin-top: -45px;"></a>
-    </div>
+    <div class="container">
+      <p style="margin-top:15px">© Copyright 2017 adWise</p>
+      <a href="https://lums.edu.pk/" target="_blank"><img src="images/lums.png"
+                                                          style="max-width:140px; float:right; margin-top: -38px;"></a>
+      </div>
   </div>
 </body>
 </html>

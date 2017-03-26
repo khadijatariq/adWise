@@ -10,6 +10,7 @@ body
 	background: rgba(0, 0, 0, 0.4);
 	margin-top: -20px;
 	padding-left: 60px;
+	padding-right: 60px;
 }
 
 #bbox h2
@@ -25,7 +26,7 @@ span.tab-space {padding-left:1.5em;}
 
 #bbox a
 {
-    color:#48a3db;
+    color:#aeea5e;
 }
 
 #bbox p
