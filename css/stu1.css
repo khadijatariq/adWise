@@ -1,3 +1,6 @@
+@import url('http://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css');
+html,
 body
 {
     background-image: url(../images/bg.jpg);
@@ -35,6 +38,7 @@ body
 .side-panel-toggle {
   cursor: pointer;
   font-size: 42px;
+  left: 20px;
 }
 .nav li a {
   position: relative;
@@ -54,19 +58,20 @@ body
   content: '\f00a';
 }
 .nav li:nth-child(2) a:before {
-  content: '\f012';
+  content: '\f115';
 }
 .nav li:nth-child(3) a:before {
   content: '\f0e8';
 }
 .nav li:nth-child(4) a:before {
-  content: '\f0c3';
-}
-.nav li:nth-child(5) a:before {
   content: '\f022';
 }
+.nav li:nth-child(5) a:before {
+  content: '\f085';
+}
 .nav li:nth-child(6) a:before {
-  content: '\f115';
+    content: '\f023';
+    left: 23px;
 }
 .nav li a:hover {
   background: #DFFFC7;
