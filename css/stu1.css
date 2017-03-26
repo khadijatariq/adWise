@@ -32,13 +32,20 @@ body
     border-bottom: 1px solid #222;
     background: #2B6612;
 }
+.content {
+  -webkit-flex: 1;
+  flex: 1;
+  padding: 10px;
+  transform: translate3d(0, 0, 0);
+  transition: all .3s;
+}
 .content.content-is-open {
-  margin-left: 220px;
+  margin-left: 240px;
 }
 .side-panel-toggle {
   cursor: pointer;
-  font-size: 42px;
-  left: 20px;
+  font-size: 35px;
+  left: 30px;
 }
 .nav li a {
   position: relative;
