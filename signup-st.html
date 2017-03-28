@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="images/logo.png">
-    <title>adWise | SIGN UP</title>
+    <title>adWise | SIGN UP STUDENT</title>
     <link rel="icon" href="images/logo.png">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/signup.css" rel="stylesheet">
@@ -40,30 +40,73 @@
     </div>
 </nav>
 
-<form action="#" method="post">
-    <h2>Sign Up</h2>
-    <p>
-        <label for="Email" class="floatLabel">Email</label>
-        <input id="Email" name="Email" type="text">
-    </p>
-    <p>
-        <label for="password" class="floatLabel">Password</label>
-        <input id="password" name="password" type="password">
-        <span>Enter a password longer than 8 characters</span>
-    </p>
-    <p>
-        <label for="confirm_password" class="floatLabel">Confirm Password</label>
-        <input id="confirm_password" name="confirm_password" type="password">
-        <span>Your passwords do not match</span>
-    </p>
-    <p>
-        <input type="submit" value="Create My Account" id="submit">
-    </p>
-</form>
+<div class="form">
+
+    <div class="tab-content">
+        <div id="signup">
+            <h1>Sign Up for Free</h1>
+
+            <form action="/" method="post">
+
+                <div class="top-row">
+                    <div class="field-wrap">
+                        <label>
+                            First Name<span class="req">*</span>
+                        </label>
+                        <input type="text" required autocomplete="off" />
+                    </div>
+
+                    <div class="field-wrap">
+                        <label>
+                            Last Name<span class="req">*</span>
+                        </label>
+                        <input type="text"required autocomplete="off"/>
+                    </div>
+                </div>
+
+                <div class="field-wrap">
+                    <label>
+                        Email Address<span class="req">*</span>
+                    </label>
+                    <input type="email"required autocomplete="off"/>
+                </div>
+
+                <div class="field-wrap">
+                    <label>
+                        Extension<span class="req">*</span>
+                    </label>
+                    <input type="number"required autocomplete="off">
+                </div>
+
+                <div class="field-wrap">
+                    <label>
+                        Major<span class="req">*</span>
+                    </label>
+                    <input type="text"required autocomplete="off">
+                </div>
+
+                <div class="field-wrap">
+                    <label>
+                        Set A Password<span class="req">*</span>
+                    </label>
+                    <input type="password"required autocomplete="off"/>
+                </div>
+
+                <button type="submit" class="button button-block"/>Create Account</button>
+
+            </form>
+
+        </div>
+
+        <div id="login"></div>
+
+    </div><!-- tab-content -->
+
+</div> <!-- /form -->
 
 <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-    <div class="container" id="map">
-        <p style="margin-top:35px">© Copyright 2017 adWise</p>
+    <div class="container">
+        <p style="margin-top:15px">© Copyright 2017 adWise</p>
         <a href="https://lums.edu.pk/" target="_blank"><img src="images/lums.png"
                                                             style="max-width:140px; float:right; margin-top: -38px;"></a>
     </div>
