@@ -1,43 +1,53 @@
-$(function() {
-    $('.nav-tabs > li > a').click(function() {
-        if($(this).hasClass('disabled')) {
-            return false;
-        } else {
-            var linkIndex = $(this).parent().index() - 1;
-            $('.nav-tabs > li').each(function(index, item) {
-                $(this).attr('rel-index', index - linkIndex);
-            });
-        }
-    });
-    $('#step-1-next').click(function() {
-        // Check values here
-        var isValid = true,
-            curInputs = $(this).closest(".tab-pane").find("input[type='text']");
-        $(".form-group").removeClass("has-error");
-        for(var i=0; i<curInputs.length; i++){
-            if (!curInputs[i].validity.valid){
-                isValid = false;
-                $(curInputs[i]).closest(".form-group").addClass("has-error");
-            }
-        }
-        if(isValid) {
-            $('.nav-tabs > li:nth-of-type(2) > a').removeClass('disabled').click();
-        }
-    });
-    $('#step-2-next').click(function() {
-        // Check values here
-        var isValid = true;
+//Problem: Hints are shown even when form is valid
+//Solution: Hide and show them at appropriate times
+var $password = $("#password");
+var $confirmPassword = $("#confirm_password");
 
-        if(isValid) {
-            $('.nav-tabs > li:nth-of-type(3) > a').removeClass('disabled').click();
-        }
-    });
-    $('#step-3-next').click(function() {
-        // Check values here
-        var isValid = true;
+//Hide hints
+$("form span").hide();
 
-        if(isValid) {
+function isPasswordValid() {
+  return $password.val().length > 8;
+}
 
-        }
-    });
-});
+function arePasswordsMatching() {
+  return $password.val() === $confirmPassword.val();
+}
+
+function canSubmit() {
+  return isPasswordValid() && arePasswordsMatching();
+}
+
+function passwordEvent(){
+    //Find out if password is valid
+    if(isPasswordValid()) {
+      //Hide hint if valid
+      $password.next().hide();
+    } else {
+      //else show hint
+      $password.next().show();
+    }
+}
+
+function confirmPasswordEvent() {
+  //Find out if password and confirmation match
+  if(arePasswordsMatching()) {
+    //Hide hint if match
+    $confirmPassword.next().hide();
+  } else {
+    //else show hint
+    $confirmPassword.next().show();
+  }
+}
+
+function enableSubmitEvent() {
+  $("#submit").prop("disabled", !canSubmit());
+}
+
+//When event happens on password input
+$password.focus(passwordEvent).keyup(passwordEvent).keyup(confirmPasswordEvent).keyup(enableSubmitEvent);
+
+//When event happens on confirmation input
+$confirmPassword.focus(confirmPasswordEvent).keyup(confirmPasswordEvent).keyup(enableSubmitEvent);
+
+enableSubmitEvent();

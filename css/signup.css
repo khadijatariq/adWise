@@ -4,128 +4,90 @@ body
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    margin-bottom: 20px;
+    font-family: sans-serif;
+    font-size: 10px;
 }
-.board {
-    width: 100%;
-    height: auto;
-    margin: 20px auto;
-    background: rgba(248,248,248,0.5);
-    border-radius: 8px 8px 0 0;
+form {
+  background: #fff;
+  padding: 4em 4em 2em;
+  max-width: 400px;
+  margin: 50px auto 0;
+  box-shadow: 0 0 1em #222;
+  border-radius: 2px;
 }
-.board .nav-tabs {
-    position: relative;
-    margin: 0 auto;
-    margin-bottom: 0;
-    box-sizing: border-box;
+form h2 {
+  margin: 0 0 50px 0;
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+  color: #666666;
+  border-bottom: solid 1px #e5e5e5;
 }
-.liner {
-    height: 2px;
-    background: #ddd;
-    position: absolute;
-    width: 80%;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    top: 50%;
-    z-index: 1;
+form p {
+  margin: 0 0 3em 0;
+  position: relative;
 }
-.nav-tabs > li {
-    width: 33%;
+form input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  outline: none;
+  margin: 0;
 }
-.nav-tabs > li:after {
-    content: " ";
-    position: absolute;
-    opacity: 0;
-    margin: 0 auto;
-    bottom: 0px;
-    border: 10px solid transparent;
-    border-bottom-color: #aaa;
-    transition: left 1s;
+form input[type="text"],
+form input[type="password"] {
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  font-size: 1.6em;
+  padding: .8em .5em;
+  border-radius: 2px;
 }
-.nav-tabs > li.active:after {
-    left: calc(50% - 10px);
-    opacity: 1;
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+  background: #fff;
 }
-.nav-tabs > li[rel-index="-1"]:after {
-    left: calc(50% + 100% - 10px);
+form span {
+  display: block;
+  background: #F9A5A5;
+  padding: 2px 5px;
+  color: #666;
 }
-.nav-tabs > li[rel-index="-2"]:after {
-    left: calc(50% + 200% - 10px);
+form input[type="submit"] {
+  background: rgba(148, 186, 101, 0.7);
+  box-shadow: 0 3px 0 0 rgba(123, 163, 73, 0.7);
+  border-radius: 2px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 2em;
+  line-height: 1.6em;
+  margin: 2em 0 0;
+  outline: none;
+  padding: .8em 0;
+  text-shadow: 0 1px #68B25B;
 }
-.nav-tabs > li[rel-index="1"]:after {
-    left: calc(50% - 100% - 10px);
+form input[type="submit"]:hover {
+  background: #94af65;
+  text-shadow: 0 1px 3px rgba(70, 93, 41, 0.7);
 }
-.nav-tabs > li[rel-index="2"]:after {
-    left: calc(50% - 200% - 10px);
+form label {
+  position: absolute;
+  left: 8px;
+  top: 12px;
+  color: #999;
+  font-size: 16px;
+  display: inline-block;
+  padding: 4px 10px;
+  font-weight: 400;
+  background-color: rgba(255, 255, 255, 0);
+  -moz-transition: color 0.3s, top 0.3s, background-color 0.8s;
+  -o-transition: color 0.3s, top 0.3s, background-color 0.8s;
+  -webkit-transition: color 0.3s, top 0.3s, background-color 0.8s;
+  transition: color 0.3s, top 0.3s, background-color 0.8s;
 }
-.nav-tabs > li a {
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    margin: 20px auto;
-    border-radius: 100%;
-    padding: 0;
-}
-.nav-tabs > li a:hover{
-    background: transparent;
-}
-.nav-tabs > li span {
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    display: inline-block;
-    border-radius: 100px;
-    background: white;
-    z-index: 2;
-    position: absolute;
-    left: 0;
-    text-align: center;
-    font-size: 25px;
-}
-.nav-tabs > li:nth-of-type(1) span {
-    color: #f1685e;
-    border: 2px solid #f1685e;
-}
-
-.nav-tabs > li:nth-of-type(1).active span {
-    color: #fff;
-    background: #f1685e;
-}
-
-.nav-tabs > li:nth-of-type(2) span {
-    color: #febe29;
-    border: 2px solid #febe29;
-}
-
-.nav-tabs > li:nth-of-type(2).active span {
-    color: #fff;
-    background: #febe29;
-}
-
-.nav-tabs > li:nth-of-type(3) span {
-    color: #25c225;
-    border: 2px solid #25c225;
-}
-
-.nav-tabs > li:nth-of-type(3).active span {
-    color: #fff;
-    background: #25c225;
-}
-.nav-tabs > li > a.disabled {
-    opacity: 1;
-}
-.nav-tabs > li > a.disabled span {
-    border-color: #ddd;
-    color: #aaa;
-}
-#s1
-{
-    background: rgba(248,248,248,0.5);
-    border-radius: 0 0 8px 8px;
-}
-span.tab-space {padding-left:1.5em;}
-#map
-{
-    margin-top: -20px;
+form label.floatLabel {
+  top: -11px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
 }
