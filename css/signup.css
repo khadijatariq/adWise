@@ -4,8 +4,9 @@ body
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    overflow: scroll;
+    }
 }
-
 legend{
 	color:#141823;
 	font-size:25px;
