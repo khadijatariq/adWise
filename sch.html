@@ -4,10 +4,33 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>adWise | Student DASHBOARD</title>
+    <title>adWise | SCHEDULER</title>
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/dashboard.css" type="text/css"/>
+
+
+
+    <link href="css/sch.css" rel="stylesheet" />
+    <link href="css/jqsch.css" rel="stylesheet" />
+    <link href="css/col.css" rel="stylesheet" />
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-34812871-2', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -74,175 +97,337 @@
             <br />
             <div>
                 <h1 class="page-header" style="color:#3DB1C8; text-align:center;"><img src="images/dash.png" style="max-width:45px;margin-right: 10px;
-                margin-bottom: 6px;">Dashboard</h1>
+                margin-bottom: 6px;">Schedule Maker</h1>
             </div>
             <div class="col-md-12 main" style="background-color:rgba(255,255,255,0.5)">
-                <a href="careers.html"><h2 class="sub-header"  style="color:#79be1f"><img src="images/career.png" style="max-width:35px;margin-right: 10px;
-                    margin-bottom: 6px;">Career Paths</h2></a>
+
                 <br />
-                <div class="row placeholders">
-                    <div class="col-xs-6 col-sm-3 placeholder">
-                        <img src="images/net.png" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-                        <h4>Networks</h4>
-                        <span class="text-muted">Something else</span>
+                <div class="addthis_sharing_toolbox"></div>
+                <div id="app">
+                    <div id="button_bar">
+                        <table>
+                            <tr>
+                                <td>
+                                    <button id="add_course_button" title="Add a new course to the schedule.">
+                                        <i class="fa fa-plus"></i>
+                                        <br />
+                                        Add Course
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="edit_course_button" title="Modify an existing course.">
+                                        <i class="fa fa-edit"></i>
+                                        <br>
+                                        Edit Course
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="delete_course_button" title="Remove an existing course from the schedule.">
+                                        <i class="fa fa-times-circle"></i>
+                                        <br />Delete Course
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="print_button" title="Send the schedule to a printer.">
+                                        <i class="fa fa-print"></i>
+                                        <br />
+                                        Print&nbsp;
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="save_image_button" title="Save the schedule as an image file onto your computer.">
+                                        <i class="fa fa-file-image-o" style=""></i>
+                                        <br />
+                                        Save as Image
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="export_schedule_button" title="Save the schedule as a '.csmo' file onto your computer.
+                                                                   You can import this file at a later time to open the saved
+                                                                   schedule and edit it.">
+                                        <i class="fa fa-download"></i>
+                                        <br />
+                                        Export Schedule
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="import_schedule_button" title="Open a previously exported '.csmo' schedule file, and
+                                                                   load the saved schedule into the application.">
+                                        <i class="fa fa-folder-open-o"></i>
+                                        <br />
+                                        Import Schedule
+                                    </button>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <button id="new_schedule_button" title="Clear the current schedule and create a new, blank schedule.">
+                                        <i class="fa fa-table"></i>
+                                        <br />
+                                        New Schedule
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-                    <div class="col-xs-6 col-sm-3 placeholder">
-                        <img src="images/hci.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-                        <h4>Human Computer Interaction</h4>
-                        <span class="text-muted">Something else</span>
-                    </div>
-                    <div class="col-xs-6 col-sm-3 placeholder">
-                        <img src="images/gr.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-                        <h4>Graphics</h4>
-                        <span class="text-muted">Something else</span>
-                    </div>
-                    <div class="col-xs-6 col-sm-3 placeholder">
-                        <img src="images/ai.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-                        <h4>Artificial Intelligence</h4>
-                        <span class="text-muted">Something else</span>
+
+                    <input id="schedule_title_textbox" type="text" maxlength="75"
+                           placeholder="Schedule Title" />
+
+                    <!-- Maybe someday my friendly source code browser.
+                    <button id="advanced_settings_button" title="Advanced Settings">
+                        <i class="fa fa-gear"></i>
+                    </button>
+                        -->
+
+                    <div id="schedule_display_viewport">
+
+
+
+                        <canvas id="schedule_display" width="775" height="540">
+                            Schedule Display: If you can read this text, your browser is not supported, or you
+                            may have JavaScript disabled.
+                        </canvas>
+
                     </div>
                 </div>
 
-                <a href="ahistory.html"><h2 class="sub-header" style="color:#79be1f"><img src="images/hist.png" style="max-width:35px;margin-right: 10px;
-                    margin-bottom: 6px;">Academic History</h2></a>
+                <!-- Sinful tables for layout.
+                <div id="advanced_settings_dialog" class="dialog">
+                    <table>
+                        <tr>
+                            <td>
+                                <label>Text Alignment</label>
+                            </td>
+                            <td>
+                                <select>
+                                    <option value="Left" selected="selected">Left</option>
+                                    <option value="Right">Right</option>
+                                    <option value="Center">Center</option>
+                                </select>
+                            </td>
+                        </tr>
 
-                <div class="table-responsive">
-                    <table class="table table-striped">
-                        <thead>
                         <tr>
-                            <th>Course Code</th>
-                            <th>Name</th>
-                            <th>Instructor</th>
-                            <th>Credits</th>
-                            <th>Grade</th>
+                            <td>
+                                <button id="save_advanced_settings_button">Save Settings</button>
+                            </td>
                         </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>CS 678</td>
-                            <td>Topics in Internet Research</td>
-                            <td>Dr. Ihsan Ayyub Qaazi</td>
-                            <td>3</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>CS 678</td>
-                            <td>Topics in Internet Research</td>
-                            <td>Dr. Ihsan Ayyub Qaazi</td>
-                            <td>3</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>CS 678</td>
-                            <td>Topics in Internet Research</td>
-                            <td>Dr. Ihsan Ayyub Qaazi</td>
-                            <td>3</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>CS 678</td>
-                            <td>Topics in Internet Research</td>
-                            <td>Dr. Ihsan Ayyub Qaazi</td>
-                            <td>3</td>
-                            <td>-</td>
-                        </tr>
-                        </tbody>
                     </table>
                 </div>
+                    -->
 
+                <div id="course_list" class="dialog">
+                    <button class="course_selection_button">
+                        You haven't added any courses yet.
+                    </button>
+                </div>
 
-                <a href="courses.html"><h2 class="sub-header" style="color:#79be1f"><img src="images/book.png" style="max-width:35px;margin-right: 10px;
-                    margin-bottom: 6px;">Courses</h2></a>
-                <div class="table-responsive">
-                    <table class="table table-striped">
-                        <thead>
+                <div id="delete_course_dialog" class="dialog">
+                    <p id="delete_course_dialog_message">Are you sure you want to delete this course?</p>
+                </div>
+
+                <div id="print_dialog" class="dialog">
+
+                </div>
+
+                <div id="color_picker_dialog" class="dialog">
+                    <table id="color_picker_contents">
                         <tr>
-                            <th>Course Code</th>
-                            <th>Name</th>
-                            <th>Instructor</th>
-                            <th>Outline</th>
+                            <td><div class="color_selection" data-color="#FFE37D"></div></td>
+                            <td><div class="color_selection" data-color="#C8F7C5"></div></td>
+                            <td><div class="color_selection" data-color="#E08283"></div></td>
+                            <td><div class="color_selection" data-color="#99CCCC"></div></td>
                         </tr>
-                        </thead>
-                        <tbody>
+
                         <tr>
-                            <td>CS 202</td>
-                            <td>Data Structures</td>
-                            <td>Dr. Shafay Shamail</td>
-                            <td><a href="http://suraj.lums.edu.pk/~ro/?go=download&path=%
-                            2F2016-2017%2FFall+2016-17&file=CS+202-EE+202-Data+Structures-Shafay+Shamail.pdf">
-                                Fall '16-17</a></td>
+                            <td><div class="color_selection" data-color="#CC99CC"></div></td>
+                            <td><div class="color_selection" data-color="#C4DA87"></div></td>
+                            <td><div class="color_selection" data-color="#F7B891"></div></td>
+                            <td><div class="color_selection" data-color="#FFDDFF"></div></td>
                         </tr>
+
                         <tr>
-                            <td>CS 202</td>
-                            <td>Data Structures</td>
-                            <td>Dr. Shafay Shamail</td>
-                            <td><a href="http://suraj.lums.edu.pk/~ro/?go=download&path=%
-                            2F2016-2017%2FFall+2016-17&file=CS+202-EE+202-Data+Structures-Shafay+Shamail.pdf">
-                                Fall '16-17</a></td>
+                            <td><div class="color_selection" data-color="#D05E52"></div></td>
+                            <td><div class="color_selection" data-color="#C5EFF7"></div></td>
+                            <td><div class="color_selection" data-color="#EBEDB3"></div></td>
+                            <td><div class="color_selection" data-color="#859451"></div></td>
                         </tr>
+
                         <tr>
-                            <td>CS 202</td>
-                            <td>Data Structures</td>
-                            <td>Dr. Shafay Shamail</td>
-                            <td><a href="http://suraj.lums.edu.pk/~ro/?go=download&path=%
-                            2F2016-2017%2FFall+2016-17&file=CS+202-EE+202-Data+Structures-Shafay+Shamail.pdf">
-                                Fall '16-17</a></td>
+                            <td><div class="color_selection" data-color="#CBC4C1"></div></td>
+                            <td><div class="color_selection" data-color="#96B695"></div></td>
+                            <td><div class="color_selection" data-color="#F4D03F"></div></td>
+                            <td><div class="color_selection" data-color="#CCCC99"></div></td>
                         </tr>
-                        <tr>
-                            <td>CS 202</td>
-                            <td>Data Structures</td>
-                            <td>Dr. Shafay Shamail</td>
-                            <td><a href="http://suraj.lums.edu.pk/~ro/?go=download&path=%
-                            2F2016-2017%2FFall+2016-17&file=CS+202-EE+202-Data+Structures-Shafay+Shamail.pdf">
-                                Fall '16-17</a></td>
-                        </tr>
-                        <tr>
-                            <td>CS 202</td>
-                            <td>Data Structures</td>
-                            <td>Dr. Shafay Shamail</td>
-                            <td><a href="http://suraj.lums.edu.pk/~ro/?go=download&path=%
-                            2F2016-2017%2FFall+2016-17&file=CS+202-EE+202-Data+Structures-Shafay+Shamail.pdf">
-                                Fall '16-17</a></td>
-                        </tr>
-                        <tr>
-                            <td>CS 202</td>
-                            <td>Data Structures</td>
-                            <td>Dr. Shafay Shamail</td>
-                            <td><a href="http://suraj.lums.edu.pk/~ro/?go=download&path=%
-                            2F2016-2017%2FFall+2016-17&file=CS+202-EE+202-Data+Structures-Shafay+Shamail.pdf">
-                                Fall '16-17</a></td>
-                        </tr>
-                        </tbody>
                     </table>
+
+                    <button id="open_advanced_color_picker_button">Create Custom Color</button>
+                </div>
+
+                <div id="advanced_color_picker_dialog" class="dialog">
+                    <div id="picker"></div>
+                </div>
+
+                <div id="course_input" class="dialog">
+
+                    <!--Contents must be separate div for dynamic elements to work properly.-->
+                    <div id="course_input_contents">
+
+                        <label>Course Title </label>
+                        <input id="course_title_textbox" type="text" placeholder="required" maxlength="300" />
+                        <label id="course_title_textbox_error" class="error_hint"></label>
+                        <br />
+                        <br />
+
+                        <label>Color</label>
+                        <input id="course_color_button" type="button" value="&nbsp;" />
+                        <br />
+                        <br />
+
+                        <form class="time_input">
+
+                            <div class="time_input_header">
+                                <label class="time_input_header_text">Meeting Time 1</label>
+                                <button type="button" class="remove_time_button"><i class="fa fa-times"></i></button>
+                            </div>
+
+                            <div class="required_time_inputs">
+
+                                <table class="day_selector">
+                                    <tr>
+                                        <td><label>Mon</label></td>
+                                        <td><label>Tues</label></td>
+                                        <td><label>Wed</label></td>
+                                        <td><label>Thurs</label></td>
+                                        <td><label>Fri</label></td>
+                                        <td class="day_selector_spacer"></td>
+                                        <td><label>Sat</label></td>
+                                        <td><label>Sun</label></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" value="mon" class="day_checkbox" /></td>
+                                        <td><input type="checkbox" value="tues" class="day_checkbox" /></td>
+                                        <td><input type="checkbox" value="wed" class="day_checkbox" /></td>
+                                        <td><input type="checkbox" value="thurs" class="day_checkbox" /></td>
+                                        <td><input type="checkbox" value="fri" class="day_checkbox" /></td>
+                                        <td class="day_selector_spacer"></td>
+                                        <td><input type="checkbox" value="sat" class="day_checkbox" /></td>
+                                        <td><input type="checkbox" value="sun" class="day_checkbox" /></td>
+                                    </tr>
+                                </table>
+                                <label class="error_hint day_selector_error"></label>
+
+                                <hr />
+
+                                <table class="clock_input">
+                                    <tr>
+                                        <td class="time_label_td"><label>Start Time</label></td>
+                                        <td><input class="time_textbox hour_textbox start_hour_textbox" type="text" maxlength="2" placeholder="12" /></td>
+                                        <td><label>:</label></td>
+                                        <td><input class="time_textbox minute_textbox start_minute_textbox" type="text" maxlength="2" placeholder="00" /></td>
+                                        <td>
+                                            <select class="start_time_AMPM_selector">
+                                                <option value="AM">AM</option>
+                                                <option value="PM">PM</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="time_label_td"><label>End Time</label></td>
+                                        <td><input class="time_textbox hour_textbox end_hour_textbox" type="text" maxlength="2" placeholder="12" /></td>
+                                        <td><label>:</label></td>
+                                        <td><input class="time_textbox minute_textbox end_minute_textbox" type="text" maxlength="2" placeholder="00" /></td>
+                                        <td>
+                                            <select class="end_time_AMPM_selector">
+                                                <option value="AM">AM</option>
+                                                <option value="PM">PM</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <label class="error_hint time_textbox_error"></label>
+
+                            </div>
+
+                            <hr />
+
+                            <div class="optional_time_inputs">
+
+                                <label>Type</label>
+                                <input class="class_type_textbox" type="text" maxlength="300" placeholder="optional (ex. Lab)" />
+                                <br />
+                                <label>Instructor</label>
+                                <input class="instructor_textbox" type="text" maxlength="300" placeholder="optional" />
+                                <br />
+                                <label>Location</label>
+                                <input class="location_textbox" type="text" maxlength="300" placeholder="optional" />
+                                <br />
+
+                            </div>
+
+                        </form>
+
+                        <input id="add_time_button" type="button" value="Add Another Meeting Time" />
+
+                        <br />
+
+                        <div id="submit_button_container">
+                            <input id="submit_button" type="button" value="Submit" />
+                        </div>
+                    </div>
+                </div>
+
+                <div id="import_schedule_dialog" class="dialog">
+
+                    <p id="import_schedule_description">Drag and drop your schedule file from your computer to the dashed box to open it.</p>
+
+                    <div id="import_schedule_drop">
+
+                    </div>
+                </div>
+
+                <div id="import_warning_dialog" class="dialog">
+                    <span style="color:red"><b>Warning:</b> This will replace your current schedule.</span>
+                    <br /><br />
+                    Cancel and <b>export</b>
+                    your schedule now if you would like to save it for later.
+                    <br />
+                    <br />
+                    Are you sure you want to continue?
+                </div>
+
+                <div id="new_warning_dialog" class="dialog">
+                    <span style="color:red"><b>Warning:</b> This will replace your current schedule.</span>
+                    <br /><br />
+                    Cancel and <b>export</b>
+                    your schedule now if you would like to save it for later.
+                    <br />
+                    <br />
+                    Are you sure you want to continue?
+                </div>
+
+                <div id="generic_warning_dialog" class="dialog">
+                    <p id="generic_warning_dialog_text"></p>
                 </div>
 
 
 
-                <a href="instructors.html"><h2 class="sub-header"  style="color:#79be1f"><img src="images/users2.png" style="max-width:35px;margin-right: 10px;
-                    margin-bottom: 6px;">Instructors</h2></a>
-                <br />
-                <div class="row placeholders">
-                    <div class="col-xs-6 col-sm-3 placeholder">
-                        <img src="images/i1.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-                        <h4>Dr. Shafay Shamail</h4>
-                        <span class="text-muted">Associate Professor - CS</span>
-                    </div>
-                    <div class="col-xs-6 col-sm-3 placeholder">
-                        <img src="images/i2.JPG" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-                        <h4>Dr. Zartash Afzal Uzmi</h4>
-                        <span class="text-muted">Associate Professor - CS/EE</span>
-                    </div>
-                    <div class="col-xs-6 col-sm-3 placeholder">
-                        <img src="images/i3.jpg" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-                        <h4>Dr. Suleman Shahid</h4>
-                        <span class="text-muted">Assistant Professor - CS</span>
-                    </div>
-                    <div class="col-xs-6 col-sm-3 placeholder">
-                        <img src="images/i4.JPG" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-                        <h4>Dr. Naveed Arshad</h4>
-                        <span class="text-muted">Associate Professor - CS</span>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
