@@ -12,7 +12,6 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/signup.css" rel="stylesheet">
 </head>
-
 <body>
 
 <nav id="myNavbar" class="navbar navbar-default" role="navigation">
@@ -39,72 +38,57 @@
         </div>
     </div>
 </nav>
-
-<div class="form">
-
-    <div class="tab-content">
-        <div id="signup">
-            <h1>Sign Up for Free</h1>
-
-            <form action="/" method="post">
-
-                <div class="top-row">
-                    <div class="field-wrap">
-                        <label>
-                            First Name<span class="req">*</span>
-                        </label>
-                        <input type="text" required autocomplete="off" />
-                    </div>
-
-                    <div class="field-wrap">
-                        <label>
-                            Last Name<span class="req">*</span>
-                        </label>
-                        <input type="text"required autocomplete="off"/>
-                    </div>
-                </div>
-
-                <div class="field-wrap">
-                    <label>
-                        Email Address<span class="req">*</span>
-                    </label>
-                    <input type="email"required autocomplete="off"/>
-                </div>
-
-                <div class="field-wrap">
-                    <label>
-                        Major<span class="req">*</span>
-                    </label>
-                    <input type="text"required autocomplete="off">
-                </div>
-
-                <div class="field-wrap">
-                    <label>
-                        Interest in field<span class="req">*</span>
-                    </label>
-                    <input type="text"required autocomplete="off">
-                </div>
-
-                <div class="field-wrap">
-                    <label>
-                        Set A Password<span class="req">*</span>
-                    </label>
-                    <input type="password"required autocomplete="off"/>
-                </div>
-
-
-
-                <button type="submit" class="button button-block"/>Create Account</button>
-
-            </form>
-
+<div class="container">
+    <div class="row">
+        <h2 class="col-sm-offset-3 col-sm-6" style="text-align:center">Student Signup</h2>
+    </div>
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-2">
         </div>
+        <div class="col-sm-6">
+            <form action="r" method="post" accept-charset="utf-8" class="form" role="form">
 
-        <div id="login"></div>
 
-    </div><!-- tab-content -->
+                <div class="row">
+                    <div class="col-xs-6 col-md-6">
+                        <input type="text" name="firstname" value="" required autocomplete="off" class="form-control input-lg" placeholder="First Name"  />                        </div>
+                    <div class="col-xs-6 col-md-6">
+                        <input type="text" name="lastname" value="" required autocomplete="off" class="form-control input-lg" placeholder="Last Name"  />                        </div>
+                </div>
 
-</div> <!-- /form -->
+                <label>Gender : </label>
+                <label class="radio-inline">
+                    <input type="radio" name="gender" value="M" id=male />Male
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="gender" value="F" id=female />Female
+                </label>
+                <br />
+
+                <input type="text" name="email" value="" required autocomplete="off" class="form-control input-lg" placeholder="Your Campus Email"  />
+                <input type="text" name="field" value="" class="form-control input-lg" placeholder="Field of Interest (If any)"  />
+                <input type="password" name="password" value="" required autocomplete="off" class="form-control input-lg" placeholder="Password"  />
+                <input type="password" name="confirm_password" value="" required autocomplete="off" class="form-control input-lg" placeholder="Confirm Password"  />
+
+
+                <div class="field-wrap">
+                    <label>
+                        Upload Zambeel Report<span class="req">*</span>
+                        <a href="https://zambeel.lums.edu.pk/" style="margin-left:320px" target="_blank">Zambeel</a>
+                    </label>
+                    <br />
+                    <input type="file"required autocomplete="off">
+                </div>
+                <br />
+
+
+
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Create my account</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
 
 <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
     <div class="container">
@@ -113,10 +97,5 @@
                                                             style="max-width:140px; float:right; margin-top: -38px;"></a>
     </div>
 </div>
-
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-    <script src="js/signup.js"></script>
-
 </body>
 </html>

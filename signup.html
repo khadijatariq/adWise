@@ -51,9 +51,9 @@
 
                 <div class="row">
                     <div class="col-xs-6 col-md-6">
-                        <input type="text" name="firstname" value="" class="form-control input-lg" placeholder="First Name"  />                        </div>
+                        <input type="text" name="firstname" value="" required autocomplete="off" class="form-control input-lg" placeholder="First Name"  />                        </div>
                     <div class="col-xs-6 col-md-6">
-                        <input type="text" name="lastname" value="" class="form-control input-lg" placeholder="Last Name"  />                        </div>
+                        <input type="text" name="lastname" value="" required autocomplete="off" class="form-control input-lg" placeholder="Last Name"  />                        </div>
                 </div>
 
                 <label>Gender : </label>
@@ -65,10 +65,10 @@
                 </label>
                 <br />
 
-                <input type="text" name="email" value="" class="form-control input-lg" placeholder="Your Campus Email"  />
+                <input type="text" name="email" value="" required autocomplete="off" class="form-control input-lg" placeholder="Your Campus Email"  />
                 <input type="text" name="field" value="" class="form-control input-lg" placeholder="Field of Interest (If any)"  />
-                <input type="password" name="password" value="" class="form-control input-lg" placeholder="Password"  />
-                <input type="password" name="confirm_password" value="" class="form-control input-lg" placeholder="Confirm Password"  />
+                <input type="password" name="password" value="" required autocomplete="off" class="form-control input-lg" placeholder="Password"  />
+                <input type="password" name="confirm_password" value="" required autocomplete="off" class="form-control input-lg" placeholder="Confirm Password"  />
 
 
                 <div class="field-wrap">
@@ -83,7 +83,7 @@
 
 
 
-                <button class="btn btn-lg btn-primary btn-block signup-btn" type="submit">Create my account</button>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Create my account</button>
             </form>
         </div>
     </div>
